@@ -40,7 +40,7 @@ The program is written completely in Python. Different libraries are used but th
 
 ### FUTURE LINES
 ---
-This version (0.1) is not the final version of the program. The program is to been designed to automate even more the process. 
+This version (0.1) is not the final version of the program. The program will be designed to automate even more the process. 
 
 The next version (0.2) will automatically insert the Job Title and the Company's name if the application is done either on Linkedin or on InfoJobs (a commonly used job-searching website in Spain).
 
