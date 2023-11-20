@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./Job Application Tracker logo.png" />
+  <img src="./Images/Job Application Tracker logo.png" />
 </p>
 
 ### ABOUT
@@ -15,7 +15,14 @@ Run the program and make sure you track your process of job applications! Oh, an
 
 ### HOW TO USE IT
 ---
-It is advised to create a new directory (for example Job Applications) and save the program there. Then, from that directory you can run the Job Applications Tracker. 
+It is advised to create a new directory (for example Job Applications) and save the program there. Then, from that directory you can run the Job Applications Tracker. Download the programs included in the .src directory. To run the program go to the directory where downloaded and run `python3 Job_Application_Tracker.py`.
+
+If you have applied through [InfoJobs](https://www.infojobs.net/), you can download the webpage to the directory `./InfoJobs` using the [Single HTML Downloader](https://www.tnksoft.com/soft/internet/singlehtml/) extension. You just need the text so there is no need to download any images or other decorating elements. Once the job has been registered, the downloaded `.html` file will automatically be deleted. Unfortunately, InfoJobs uses advanced anti-bot techniques that I have not been able to overpass neither with Selenium or other packages. But the process of downloading the website as a `.html` archive is fast and still works fine.
+
+The first thing the program does is to search in the `./InfoJobs` folder for downloaded files and register the data. 
+
+If you apply to different websites you have to import the data manually. 
+
 
 First, it asks for a url and then for the job title and the company's name. You can leave it running while you apply for different job positions. 
 
@@ -30,6 +37,8 @@ After you have checked that everything is as it should, all the records are pass
 The program is written completely in Python. Different libraries are used but the majority of them are already included in basic Python3. 
 
 - [Pandas](https://pandas.pydata.org/) is used for reading and writing the spreadsheet. Also the registers are passed in a DataFrame. 
+- [Numpy](https://numpy.org/) to convert empty string to NaN 
+- [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/) for webparsing the InfoJobs website.
 
 ##### Pre-installed libraries used
 - datetime
@@ -37,13 +46,13 @@ The program is written completely in Python. Different libraries are used but th
 - re
 - readline
 - argparse 
+- os
+- chardet
 
 ### FUTURE LINES
 ---
-This version (0.1) is not the final version of the program. The program will be designed to automate even more the process. 
-
-The next version (0.2) will automatically insert the Job Title and the Company's name if the application is done either on Linkedin or on InfoJobs (a commonly used job-searching website in Spain).
-
-Even then, the program will not be complete. My first idea was to include a LLM (specifically, the Llama2 of Meta) to summarise the job description in one or two paragraphs. Version 1.0 will include this feature but it will be optional as Llama2 will have to run on the user's local machine. 
+My first idea was to include a LLM (specifically, the Llama2 of Meta) to summarise the job description in one or two paragraphs. Version 1.0 will include this feature but it will be optional as Llama2 will have to run on the user's local machine. 
 
 Version 1.1 will also make optional the use of ChatGPT (with the user's credentials) for doing the summary.
+
+Also, other sites (like Linkedin) might be included in automatic insert.
