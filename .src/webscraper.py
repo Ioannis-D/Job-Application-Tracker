@@ -2,7 +2,6 @@
 # Creator: Ioannis Doganos | github:https://github.com/Ioannis-D
 
 
-#import re
 from bs4 import BeautifulSoup
 import chardet
 
